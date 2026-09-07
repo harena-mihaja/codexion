@@ -1,7 +1,22 @@
-CC=cc
-NAME=codexion
+CC:=cc
+CFLAGS:=-Wall -Wextra -Werror
+NAME:=codexion
+SRC_DIR:=coders
+SRCS_FILES:=main.c
+SRCS:=$(addprefix $(SRC_DIR)/, $(SRCS_FILES))
+OBJ=$(SRCS:.c=.o)
 
-hello:
-	@echo "Hello World!"
+all: $(NAME)
 
-.PHONY: NAME all clean fclean re
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+	rm -rf $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: $(NAME) all clean fclean re
