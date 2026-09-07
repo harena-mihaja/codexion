@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by hrahamal*
+*This project has been created as part of the 42 curriculum by hrahamal.*
 
 # Codexion
 
@@ -6,7 +6,7 @@
 
 ### Blocking cases handled
 
-### THread synchronization mechanisms
+### Thread synchronization mechanisms
 
 ## Instructions
 
