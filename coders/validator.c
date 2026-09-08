@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 13:38:43 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 14:22:31 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 19:09:33 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ int	is_config_valid(t_config config)
 
 static int	is_num_valid(int n)
 {
-	if (n <= 0)
+	if (n < 0)
 		return (0);
 	return (1);
 }
 
 static int	is_time_valid(long time)
 {
-	if (time <= 0)
+	if (time < 0)
 		return (0);
 	return (1);
 }
