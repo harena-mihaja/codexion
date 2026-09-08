@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 10:25:47 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 13:43:11 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 14:34:06 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	printf("num coders: %d\n", config.num_coders);
-	printf("burnout: %ld\n", config.time_burnout);
+	printf("time burnout: %ld\n", config.time_burnout);
 	printf("time compile: %ld\n", config.time_compile);
 	printf("time debug: %ld\n", config.time_debug);
-	printf("ref: %ld\n", config.time_refactor);
+	printf("time refactor: %ld\n", config.time_refactor);
 	printf("num compile: %d\n", config.num_compiles);
 	printf("dongle cooldown: %ld\n", config.dongle_cooldown);
 	printf("scheduler: %s\n", config.scheduler);

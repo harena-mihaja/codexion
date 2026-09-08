@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:28:59 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 12:58:50 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 14:45:04 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,12 @@ static int	parse_int(char *str)
 {
 	size_t	len;
 	size_t	i;
+	long	tmp;
 
 	if (str[0] != '+' && str[0] != '-' && !is_num(str[0]))
+		return (-1);
+	tmp = ft_atol(str);
+	if (tmp > INT_MAX || tmp < INT_MIN)
 		return (-1);
 	len = strlen(str);
 	i = 1;
