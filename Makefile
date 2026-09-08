@@ -2,7 +2,7 @@ CC:=cc
 CFLAGS:=-Wall -Wextra -Werror
 NAME:=codexion
 SRC_DIR:=coders
-SRCS_FILES:=main.c
+SRCS_FILES:=main.c parser.c
 SRCS:=$(addprefix $(SRC_DIR)/, $(SRCS_FILES))
 OBJ=$(SRCS:.c=.o)
 
