@@ -6,11 +6,12 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:28:59 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 10:22:06 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 11:19:35 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "headers/parser.h"
+#include "headers/utils.h"
 
 static long	parse_time(char *str);
 static char	*parse_scheduler(char *str);
@@ -29,4 +30,22 @@ t_config	parse_config(char **argv)
 	config.dongle_cooldown = parse_time(argv[7]);
 	config.scheduler = parse_scheduler(argv[8]);
 	return (config);
+}
+
+static int	parse_int(char *str)
+{
+	size_t	len;
+	size_t	i;
+
+	if (str[0] != '+' && str[0] != '-' && !is_num(str[0]))
+		return (-1);
+	len = strlen(str);
+	i = 1;
+	while (i < len)
+	{
+		if (!is_num(str[i]))
+			return (-1);
+		i++;
+	}
+	return (atoi(str));
 }

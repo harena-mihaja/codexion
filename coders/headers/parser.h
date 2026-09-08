@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parser.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/25 10:25:47 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 10:31:33 by hrahamal         ###   ########.fr       */
+/*   Created: 2026/09/07 16:07:49 by hrahamal          #+#    #+#             */
+/*   Updated: 2026/09/08 11:09:33 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "headers/parser.h"
+#ifndef PARSER_H
+# define PARSER_H
+# include <stdlib.h>
+# include <string.h>
 
-int	main(int argc, char **argv)
+typedef struct s_config
 {
-	t_config	config;
+	long	time_burnout;
+	long	time_compile;
+	long	time_debug;
+	long	time_refactor;
+	long	dongle_cooldown;
+	char	*scheduler;
+	int		num_coders;
+	int		num_compiles;
+}	t_config;
 
-	if (argc != 9)
-	{
-		printf("[ERROR] Invalid number of argument passed.\n");
-		printf("Usage: ./codexion <number_of_coders> <time_to_burnout>"
-			"<time_to_compile> <time_to_debug> <time_to_refactor>"
-			"<number_of_compiles_required> <dongle_cooldown> <scheduler>");
-	}
-	config = parse_config(argv);
-}
+t_config	parse_config(char **argv);
+
+#endif
