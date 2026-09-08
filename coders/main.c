@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 10:25:47 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 13:22:43 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 13:43:11 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	config = parse_config(argv);
+	if (!is_config_valid(config))
+	{
+		printf("[ERROR] The provided arguments are invalid.\n");
+		return (1);
+	}
 	printf("num coders: %d\n", config.num_coders);
 	printf("burnout: %ld\n", config.time_burnout);
 	printf("time compile: %ld\n", config.time_compile);

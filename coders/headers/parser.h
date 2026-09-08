@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:07:49 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 12:38:42 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 13:38:20 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ typedef struct s_config
 }	t_config;
 
 t_config	parse_config(char **argv);
+int			is_config_valid(t_config config);
 
 #endif
