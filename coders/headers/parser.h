@@ -6,14 +6,13 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:07:49 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 11:09:33 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/08 12:38:42 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSER_H
 # define PARSER_H
 # include <stdlib.h>
-# include <string.h>
 
 typedef struct s_config
 {
