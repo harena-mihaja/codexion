@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 10:31:57 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 12:55:34 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 09:37:09 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,13 @@ long	ft_atol(char *s)
 	if (s[0] == '-')
 		return (-res);
 	return (res);
+}
+
+void	print_err(const char *format, ...)
+{
+	va_list	args;
+
+	va_start(args, format);
+	fprintf(stderr, format, args);
+	va_end(args);
 }
