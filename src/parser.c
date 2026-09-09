@@ -6,12 +6,12 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:28:59 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 14:45:04 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 12:39:07 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/parser.h"
-#include "headers/utils.h"
+#include "parser.h"
+#include "utils.h"
 
 static long	parse_time(char *str);
 static int	parse_int(char *str);

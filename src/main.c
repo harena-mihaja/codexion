@@ -6,12 +6,12 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 10:25:47 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/09 10:38:01 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 12:38:55 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/parser.h"
-#include "headers/utils.h"
+#include "parser.h"
+#include "utils.h"
 
 int	main(int argc, char **argv)
 {

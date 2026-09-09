@@ -6,12 +6,12 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 13:38:43 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/09 08:41:57 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 12:39:23 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/parser.h"
-#include "headers/utils.h"
+#include "parser.h"
+#include "utils.h"
 
 static int	is_time_valid(long time);
 static int	is_scheduler_valid(char *s);

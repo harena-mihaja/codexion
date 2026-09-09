@@ -1,11 +1,10 @@
 CC:=cc
 CFLAGS:=-Wall -Wextra -Werror
 NAME:=codexion
-SRC_DIR:=coders
+SRC_DIR:=src
 SRCS_FILES:=main.c parser.c utils.c validator.c
-HEADERS_DIR=headers
 HEADERS_FILES:=parser.h utils.h
-HEADERS:=$(addprefix $(SRC_DIR)/$(HEADERS_DIR)/, $(HEADERS_FILES))
+HEADERS:=$(addprefix $(SRC_DIR)/, $(HEADERS_FILES))
 SRCS:=$(addprefix $(SRC_DIR)/, $(SRCS_FILES))
 OBJ=$(SRCS:.c=.o)
 
