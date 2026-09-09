@@ -2,13 +2,16 @@ CC:=cc
 CFLAGS:=-Wall -Wextra -Werror
 NAME:=codexion
 SRC_DIR:=coders
-SRCS_FILES:=main.c
+SRCS_FILES:=main.c parser.c utils.c validator.c
+HEADERS_DIR=headers
+HEADERS_FILES:=parser.h utils.h
+HEADERS:=$(addprefix $(SRC_DIR)/$(HEADERS_DIR)/, $(HEADERS_FILES))
 SRCS:=$(addprefix $(SRC_DIR)/, $(SRCS_FILES))
 OBJ=$(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADERS)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
@@ -19,4 +22,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: $(NAME) all clean fclean re
+.PHONY: all clean fclean re
