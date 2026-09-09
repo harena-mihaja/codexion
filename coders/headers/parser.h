@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:07:49 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/08 14:44:37 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 08:53:00 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define PARSER_H
 # include <stdlib.h>
 # include <limits.h>
+# define MIN_NUM_CODER 1
+# define MAX_NUM_CODER 200
+# define MIN_NUM_COMPILES 1
+# define MAX_NUM_COMPILES 10
+# define MIN_TIME_MS 0
 
 typedef struct s_config
 {
