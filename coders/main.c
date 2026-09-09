@@ -6,7 +6,7 @@
 /*   By: hrahamal <hrahamal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 10:25:47 by hrahamal          #+#    #+#             */
-/*   Updated: 2026/09/09 10:17:14 by hrahamal         ###   ########.fr       */
+/*   Updated: 2026/09/09 10:38:01 by hrahamal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ int	main(int argc, char **argv)
 	if (argc != 9)
 	{
 		print_err(RED"[ERROR]"RESET" Invalid number of argument passed.\n");
-		print_err(GREEN"Usage:"RESET" ./codexion <number_of_coders> <time_to_burnout>"
-			" <time_to_compile> <time_to_debug> <time_to_refactor>"
-			" <number_of_compiles_required> <dongle_cooldown> <scheduler>");
+		print_err(GREEN"Usage:"RESET" ./codexion <number_of_coders>"
+			"<time_to_burnout> <time_to_compile> <time_to_debug>"
+			"<time_to_refactor> <number_of_compiles_required> <dongle_cooldown>"
+			" <scheduler>");
 		return (1);
 	}
 	config = parse_config(argv);
